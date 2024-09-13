@@ -1,0 +1,3 @@
+[external]
+viennarna_path = ""
+nauty_path = "wsl ~/nauty2_8_8/"
