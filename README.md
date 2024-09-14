@@ -8,8 +8,8 @@ This repository contains code related to the article _Normalized topological ind
 ```
 pip install virtualenv
 mkdir .venv
-virtualenv .venv --prompt phase_space
-.venv/Scripts/activate
+virtualenv .venv --prompt topological-indices
+source .venv/bin/activate   # Windows: .venv/Scripts/activate
 
 pip install -e src
 pip install -r requirements.txt
