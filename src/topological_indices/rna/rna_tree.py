@@ -49,11 +49,11 @@ def _generate_tree(bg, include_nucleotides=False):
                 if a[0] != 'm' and b[0] != 'm':
                     G.add_edge(a, b, length=bg.stem_length(el))
                 elif a[0] == 'm' and b[0] == 'm':   # Special base: see below
-                    G.add_node('o', type='n', unpaired=0)
+                    G.add_node('o', type='n', unpaired=0, nucs=[], defines=[])
                     connect_to_virtual_node = (a, bg.stem_length(el))
             # Special case: stem at the beginning/end of the sequence with no t0 or f0; add virtual node
             elif len(adj) == 1:
-                G.add_node('o', type='n', unpaired=0)
+                G.add_node('o', type='n', unpaired=0, nucs=[], defines=[])
                 G.add_edge('o', list(adj)[0], length=bg.stem_length(el))
 
     curr_m_i = 0
@@ -187,7 +187,7 @@ def RAGify_tree(T):
     T_new = T.copy()
     merges = {}
 
-    order = {'i':0, 'h':1, 'm*':2}
+    order = {'i':0, 'n':0.5, 'h':1, 'm*':2}
 
     for n1, n2, data in T.edges(data=True):
         if data['length'] == 1:
@@ -252,7 +252,7 @@ def _merge_nodes(T: nx.Graph, node1, node2):
     if T.degree[node1] > 2 and T.degree[node1] > 2:
         # Merging two multiloops
         # TODO: transfer unpaired nucleotides?
-        T = nx.contracted_nodes(T, node1, node2, False)
+        T = nx.contracted_nodes(T, node2, node1, False)
 
     else: 
         if T.degree[node1] > 1:
