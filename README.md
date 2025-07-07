@@ -1,6 +1,6 @@
 # Topological indices
 
-This repository contains code related to the article [Vaupotič, D., Morand, J., Tubiana, L., Božič, A. _Normalized topological indices discriminate between architectures of branched macromolecules_. 2025](https://arxiv.org/abs/2409.16007).
+This repository contains code related to the article [Vaupotič, D., Morand, J., Tubiana, L., Božič, A. _Normalized topological indices discriminate between architectures of branched macromolecules_. J. Chem. Phys. **162**, 234902 (2025)](https://doi.org/10.1063/5.0268964). (Also available on [arXiv](https://arxiv.org/abs/2409.16007).)
 
 ![Figure](fig.jpg)
 
@@ -34,4 +34,4 @@ See [`topological_indices.ipynb`](topological_indices.ipynb).
 
 If you use this code in your work, please cite our article:
 
-> Vaupotič, D., Morand, J., Tubiana, L., Božič, A. _Normalized topological indices discriminate between architectures of branched macromolecules_. 2025. [arXiv:2409.16007](https://arxiv.org/abs/2409.16007)
+> Vaupotič, D., Morand, J., Tubiana, L., Božič, A. _Normalized topological indices discriminate between architectures of branched macromolecules_. J. Chem. Phys. **162**, 234902 (2025). [DOI: 10.1063/5.0268964](https://doi.org/10.1063/5.0268964)
